@@ -1,0 +1,28 @@
+{
+  "name": "leadconveer-landing",
+  "version": "1.0.0",
+  "description": "Modern landing page with Vue.js, TypeScript and SCSS",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-vue": "^5.0.0",
+    "@vue/tsconfig": "^0.5.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.20.0",
+    "sass": "^1.70.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "vue-tsc": "^1.8.0"
+  },
+  "keywords": ["vue", "typescript", "scss", "landing"],
+  "author": "",
+  "license": "MIT"
+} 
