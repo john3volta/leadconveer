@@ -1,0 +1,49 @@
+@use '../utils/functions' as *;
+@use './variables' as *;
+
+// ===== RESPONSIVE MIXINS =====
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin responsive($property, $min, $max, $min-width: 1024, $max-width: 1920) {
+  #{$property}: responsive-clamp($min, $max, $min-width, $max-width);
+}
+
+// ===== LAYOUT MIXINS =====
+@mixin flex($direction, $justify, $align, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
+}
+
+// ===== TYPOGRAPHY MIXINS =====
+@mixin text-style($size: 16, $weight: 400, $line-height: 1.5, $spacing: 0) {
+    font-size: rem-calc($size);
+    font-weight: $weight;
+    line-height: $line-height;
+    letter-spacing: $spacing;
+}
+
+// ===== ANIMATION MIXINS =====
+@mixin fade($type, $duration: 0.3s) {
+  @if $type == "hide" {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $duration, opacity $duration;
+  } @else if $type == "show" {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility $duration, opacity $duration;
+  }
+}
