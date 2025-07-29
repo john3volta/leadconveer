@@ -20,7 +20,7 @@
 }
 
 // ===== LAYOUT MIXINS =====
-@mixin flex($direction: column, $justify: normal, $align: normal, $wrap: nowrap) {
+@mixin flex($direction: row, $justify: normal, $align: normal, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
