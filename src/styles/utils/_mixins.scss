@@ -1,5 +1,6 @@
 @use '../utils/functions' as *;
-@use './variables' as *;
+@use '../base/variables' as *;
+@use 'sass:string';
 
 // ===== RESPONSIVE MIXINS =====
 @mixin tablet {
@@ -19,7 +20,7 @@
 }
 
 // ===== LAYOUT MIXINS =====
-@mixin flex($direction: column, $justify: center, $align: center, $wrap: nowrap) {
+@mixin flex($direction: column, $justify: normal, $align: normal, $wrap: nowrap) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify;
@@ -30,7 +31,7 @@
 // ===== TYPOGRAPHY MIXINS =====
 @mixin font-face($font-name, $path, $weight: normal, $style: normal) {
   @font-face {
-    font-family: quote($font-name);
+    font-family: string.quote($font-name);
     src: url($path+".woff2") format("woff2");
     font-weight: $weight;
     font-style: $style;
