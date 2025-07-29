@@ -28,6 +28,16 @@
 }
 
 // ===== TYPOGRAPHY MIXINS =====
+@mixin font-face($font-name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($path+".woff2") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
 @mixin text-style($size: 16, $weight: 400, $line-height: 1.5, $spacing: 0) {
     font-size: rem-calc($size);
     font-weight: $weight;
