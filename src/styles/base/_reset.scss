@@ -21,6 +21,7 @@ body {
   min-height: 100vh;
   @include flex;
   text-rendering: optimizeLegibility;
+  @include responsive(font-size, 12, 16);
   @include text-style;
   color: $color-text;
   font-family: $font-primary;
