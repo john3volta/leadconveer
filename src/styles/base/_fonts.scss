@@ -1,0 +1,12 @@
+@use '../utils/mixins' as *;
+
+// ===== INTER FONT =====
+@include font-face('Inter', '../assets/fonts/Inter/Inter_18pt-Regular', 400, normal);
+@include font-face('Inter', '../assets/fonts/Inter/Inter_18pt-Medium', 500, normal);
+@include font-face('Inter', '../assets/fonts/Inter/Inter_18pt-SemiBold', 600, normal);
+@include font-face('Inter', '../assets/fonts/Inter/Inter_18pt-Bold', 700, normal);
+
+// ===== MONTSERRAT FONT =====
+@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Regular', 400, normal);
+@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Medium', 500, normal);
+@include font-face('Montserrat', '../assets/fonts/Montserrat/Montserrat-Bold', 700, normal); 
